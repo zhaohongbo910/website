@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %} 
+    {% block title%}
+    <title>ERP</title>
+    {% endblock %}
+      {% block layui_header %}
+        <div class="layui-header">
+            <div class="layui-logo"><a href="/">ERP</a></div>
+            <div class="layui-logo kit-logo-mobile">K</div>
+            <ul class="layui-nav layui-layout-left kit-nav">
+                <li class="layui-nav-item"><a href="javascript:;">控制台</a></li>
+                <li class="layui-nav-item"><a href="javascript:;">商品管理</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">其它系统</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">邮件管理</a></dd>
+                        <dd><a href="javascript:;">消息管理</a></dd>
+                        <dd><a href="javascript:;">授权管理</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right kit-nav">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="http://m.zhengjinfan.cn/images/0.jpg" class="layui-nav-img"> Van
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">基本资料</a></dd>
+                        <dd><a href="javascript:;">安全设置</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a></li>
+            </ul>
+        </div>
+        {% endblock %}
+    {% block layui_side%}
+        <div class="layui-side layui-bg-black kit-side">
+            <div class="layui-side-scroll">
+                <div class="kit-side-fold"><i class="fa fa-navicon" aria-hidden="true"></i></div>
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="kitNavbar" kit-navbar>
+                    <li class="layui-nav-item">
+                        <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 库存管理</span></a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;" kit-target data-options="{url:'warehouse_management',icon:'&#xe6c6;',title:'出库管理',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 出库管理</span></a>
+
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url="stock_management" data-icon="fa-user" data-title="入库管理" kit-target data-id='2'><i class="fa fa-user" aria-hidden="true"></i><span> 入库管理</span></a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url="stock_search" data-icon="&#xe628;" data-title="库存查询" kit-target data-id='3'><i class="layui-icon">&#xe628;</i><span> 库存查询</span></a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url="stock_daily" data-icon="&#xe628;" data-title="库存日结" kit-target data-id='4'><i class="layui-icon">&#xe628;</i><span> 库存日结</span></a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url="stock_loss" data-icon="&#xe614;" data-title="库存报损" kit-target data-id='5'><i class="layui-icon">&#xe614;</i><span> 库存报损</span></a>
+                            </dd>
+                        </dl>
+                    </li>    
+
+                    <li class="layui-nav-item">
+                        <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 采购管理</span></a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;" kit-target data-options="{url:'purchase_requisition',icon:'&#xe6c6;',title:'采购申请',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 采购申请</span></a>
+
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url="procurement_plan" data-icon="fa-user" data-title="采购计划" kit-target data-id='2'><i class="fa fa-user" aria-hidden="true"></i><span> 采购计划</span></a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url="procurement_search" data-icon="&#xe628;" data-title="采购查询" kit-target data-id='3'><i class="layui-icon">&#xe628;</i><span> 采购查询</span></a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;" data-url="procurement_order" data-icon="&#xe614;" data-title="采购合同" kit-target data-id='5'><i class="layui-icon">&#xe614;</i><span> 采购合同</span></a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 财务管理</span></a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" kit-target data-options="{url:'financial',icon:'&#xe658;',title:'总账',id:'11'}"><i class="layui-icon">&#xe658;</i><span> 总账</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'financial',icon:'&#xe658;',title:'报表',id:'12'}"><i class="layui-icon">&#xe658;</i><span> 报表</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'financial',icon:'&#xe658;',title:'出纳管理',id:'13'}"><i class="layui-icon">&#xe658;</i><span> 出纳管理</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'financial',icon:'&#xe658;',title:'会计平台',id:'14'}"><i class="layui-icon">&#xe658;</i><span> 会计平台</span></a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 人事管理</span></a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;"  data-url="organizational_management" data-icon="fa-user" data-title="组织管理" kit-target data-id='31'><i class="layui-icon">&#xe658;</i><span> 组织管理</span></a></dd>
+                            <dd><a href="javascript:;" data-url="human_archives" data-icon="fa-user" data-title="人力档案" kit-target data-id='32'><i class="layui-icon">&#xe658;</i><span> 人力档案</span></a></dd>
+                            <dd><a href="javascript:;" data-url="position_transfer" data-icon="fa-user" data-title="人事调动" kit-target data-id='33'><i class="layui-icon">&#xe658;</i><span> 人事调动</span></a></dd>
+                            <dd><a href="javascript:;" data-url="training_management" data-icon="fa-user" data-title="培训管理" kit-target data-id='34'><i class="layui-icon">&#xe658;</i><span> 培训管理</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'employment_interview',icon:'&#xe658;',title:'App',id:'35'}"><i class="layui-icon">&#xe658;</i><span> 招聘面试</span></a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;" data-url="/views/form.html" data-name="form" kit-loader><i class="fa fa-plug" aria-hidden="true"></i><span> 行政管理</span></a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" kit-target data-options="{url:'equipment',icon:'&#xe658;',title:'设备管理',id:'20'}"><i class="layui-icon">&#xe658;</i><span> 设备管理</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'tab',icon:'&#xe658;',title:'考勤管理',id:'21'}"><i class="layui-icon">&#xe658;</i><span> 考勤管理</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'onelevel',icon:'&#xe658;',title:'办公用品',id:'22'}"><i class="layui-icon">&#xe658;</i><span> 办公用品</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'app',icon:'&#xe658;',title:'会议管理',id:'23'}"><i class="layui-icon">&#xe658;</i><span> 会议管理</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'app',icon:'&#xe658;',title:'车辆管理',id:'24'}"><i class="layui-icon">&#xe658;</i><span> 车辆管理</span></a></dd>
+                        </dl>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    {% endblock%}
+
+    {% block layui_body %}
+        <div class="layui-body" id="container">
+            <!-- 内容主体区域 -->
+            <div style="padding: 15px;">主体内容加载中,请稍等...</div>
+        </div>
+    {% endblock%}
+    {% block footer_javascript %}
+        <script>
+            var message;
+            layui.config({
+                base: 'static/js/',
+                version:true,
+                debug:true
+            }).use(['app', 'message'], function() {
+                var app = layui.app,
+                    $ = layui.jquery,
+                    layer = layui.layer;
+                //将message设置为全局以便子页面调用
+                message = layui.message;
+                //主入口
+                app.set({
+                    type: 'iframe'
+                }).init();
+            });
+        </script>
+    {% endblock %}

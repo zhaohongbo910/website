@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %} 
+{% block style%}
+    <link rel="stylesheet" href="{% static "css/organizational_management.css"%}" media="all">
+{% endblock %}
+{% block layui_body %}
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>组织机构设置</legend>
+        </fieldset>
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">机构编号</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">上级机构</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">机构名称</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+            </div>
+              <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">Email</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">地址</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">邮编</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">联系人</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">电话</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">传真</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">独立核算</label>
+                  <div class="layui-input-block">
+                    <select name="modules" lay-verify="required" lay-search="">
+                      <option value="0">否</option>
+                      <option value="1">是</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">分公司</label>
+                  <div class="layui-input-block">
+                    <select name="modules" lay-verify="required" lay-search="">
+                      <option value="0">否</option>
+                      <option value="1">是</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">是否分店</label>
+                  <div class="layui-input-block">
+                    <select name="modules" lay-verify="required" lay-search="">
+                      <option value="0">否</option>
+                      <option value="1">是</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">描述信息</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入描述信息" class="layui-textarea"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> 
+
+<div class="layui-fluid">  
+     <div class="layui-row">
+        <div class="layui-col-xs-12 layui-col-sm-12 layui-col-md-12 layui-col-lg-12">
+              <div class="btn_content">
+                <button class="layui-btn">保存</button>
+                <button class="layui-btn">返回</button>
+              </div>
+        </div>
+    </div> 
+</div>  
+
+{% endblock%}
+{% block footer_javascript %}
+    <script src="{% static "js/stock_management.js"%}"></script>
+{% endblock%}

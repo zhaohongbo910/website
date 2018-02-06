@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %} 
+{% block style%}
+    <link rel="stylesheet" href="{% static "css/stock_daily.css"%}" media="all">
+{% endblock %}
+{% block layui_body %}
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>库存日结详情</legend>
+        </fieldset>
+        <form class="layui-form layui-form-pane" action="">
+            
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">出库时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="date" id="date1" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit="" lay-filter="demo2">搜索</button>
+                <button class="layui-btn" lay-submit="" lay-filter="demo2">同步库存</button>
+            </div>
+        </form>
+    </div>
+</div> 
+
+
+
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>库存查询结果</legend>
+        </fieldset>
+        <div class="layui-form-item">
+            <button class="layui-btn" lay-submit="" lay-filter="demo2">导出</button>
+            <button class="layui-btn" lay-submit="" lay-filter="demo2">日结</button>
+        </div>
+        <table class="layui-table">
+            <colgroup>
+              <col width="150">
+              <col width="150">
+              <col width="200">
+              <col>
+            </colgroup>
+            <thead>
+
+              <tr>           
+                <th>日期</th>
+                <th>物品编号</th>
+                <th>品名</th>
+                <th>规格</th>
+                <th>批次</th>
+                <th>仓库</th>
+                <th>入库总数量</th>
+                <th>出库总数量</th>
+                <th>当日结存量</th>      
+              </tr> 
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>123</td>
+                <td>dhiehien</td>
+                <td>零件</td>
+                <td>1</td>
+                <td>230</td>
+                <td>230</td>
+                <td>230</td>
+                <td>230</td>
+              </tr>
+            </tbody>  
+        </table>
+    </div>    
+</div> 
+{% endblock%}
+{% block footer_javascript %}
+    <script src="{% static "js/stock_daily.js"%}"></script>
+{% endblock%}

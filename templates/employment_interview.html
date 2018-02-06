@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %} 
+{% block style%}
+    <link rel="stylesheet" href="{% static "css/organizational_management.css"%}" media="all">
+{% endblock %}
+{% block layui_body %}
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <div class="layui-col-xs-12 layui-col-sm-12 layui-col-md-12 layui-col-lg-12">
+              <div class="btn_content">
+                <button class="layui-btn">保存</button>
+                <button class="layui-btn">返回</button>
+              </div>
+        </div>
+    </div>
+</div>  
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>基本信息</legend>
+        </fieldset>
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">编号</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">姓名</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">招聘方式</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">应聘岗位</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">面试模板</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>         
+            </div>
+        </form>
+    </div>
+</div> 
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>初试记录</legend>
+        </fieldset>
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">日期</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date" id="date1" autocomplete="off" class="layui-input date_content">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">面试方式</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">面试地点</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">初试结果</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>         
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">初试综合评价</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入对应聘人员的初试综合评价" class="layui-textarea"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> 
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>复试记录</legend>
+        </fieldset>
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">日期</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date" id="date1" autocomplete="off" class="layui-input date_content">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">面试方式</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">面试地点</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">综合素质</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                 <div class="layui-inline">
+                  <label class="layui-form-label">专业知识</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">工作经验</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>       
+                <div class="layui-inline">
+                  <label class="layui-form-label">要求待遇</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">综合评价</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">备注</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">可供待遇</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>   
+                <div class="layui-inline">
+                  <label class="layui-form-label">确认工资</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">复试结果</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>         
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">其他方面</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入更多介绍" class="layui-textarea"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> 
+
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>进度安排</legend>
+        </fieldset>
+        <table class="layui-table">
+            <colgroup>
+              <col width="300">
+              <col width="100">
+              <col width="100">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>要素名称</th>
+                <th>满分</th>
+                <th>权重（%）</th>
+                <th>面试得分</th>
+                <th>备注</th>
+              </tr> 
+            </thead>
+            <tbody>
+              <tr>
+                <td>语言表达</td>
+                <td>15</td>
+                <td>15</td>
+                <td>14</td>
+                <td></td>
+              </tr>
+               <tr>
+                <td>综合分析能力</td>
+                <td>15</td>
+                <td>15</td>
+                <td>14</td>
+                <td></td>
+              </tr>
+               <tr>
+                <td>应变能力</td>
+                <td>15</td>
+                <td>15</td>
+                <td>14</td>
+                <td></td>
+              </tr>
+            </tbody>  
+        </table>
+    
+    </div>    
+</div> 
+
+{% endblock%}
+{% block footer_javascript %}
+    <script src="{% static "js/stock_management.js"%}"></script>
+{% endblock%}

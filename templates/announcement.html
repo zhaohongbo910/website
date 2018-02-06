@@ -1,0 +1,22 @@
+{% load i18n staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>table模块快速使用</title>
+    <link rel="stylesheet" href="{% static "layui/css/layui.css"%}" media="all">
+</head>
+<body>
+
+    <div>{{content.content}}</div>
+
+    <script src="{% static "layui/layui.js"%}"></script>
+    <script>
+        layui.use('table', function() {
+            var table = layui.table;
+        });
+    </script>
+</body>
+
+</html>

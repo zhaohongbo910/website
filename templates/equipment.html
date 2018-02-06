@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block style%}
+    <link rel="stylesheet" href="{% static "css/purchase_requisition.css"%}" media="all">
+{% endblock %}
+
+{% block layui_body %}
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <div class="layui-col-xs-12 layui-col-sm-12 layui-col-md-12 layui-col-lg-12">
+            <div class="btn_content">
+                <button class="layui-btn">保存</button>
+                <button class="layui-btn">继续录入</button>
+                <button class="layui-btn">返回</button>
+                <button class="layui-btn">打印</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>基础信息</legend>
+        </fieldset>
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">设备编号*</label>
+                    <div class="layui-input-block">
+                      <input type="text" name="date"  autocomplete="off" class="layui-input">
+                    </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">设备名称*</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                    <label class="layui-form-label label_content">检测周期(月)*</label>
+                    <div class="layui-input-block">
+                      <input type="text" name="date"  autocomplete="off" class="layui-input">
+                    </div>
+                </div>  
+                <div class="layui-inline">
+                  <label class="layui-form-label">保修期(年)</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>  
+                <div class="layui-inline">
+                  <label class="layui-form-label">单位</label>
+                  <div class="layui-input-block">
+                    <select name="interest" lay-filter="aihao">
+                        <option value=""></option>
+                        <option value="0">台</option>
+                      </select>
+                  </div>
+                </div>                      
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">有无配件*</label>
+                    <div class="layui-input-block">
+                      <select name="interest" lay-filter="aihao">
+                        <option value="0">无</option>
+                        <option value="1">有</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">金额(元)*</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="date" autocomplete="off" class="layui-input">
+                    </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">设备序列号</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">设备精度</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">供应商</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">当前使用人</label>
+                    <div class="layui-input-block">
+                      <input type="text" name="date"  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">拼音缩写</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="date" autocomplete="off" class="layui-input">
+                    </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">状态*</label>
+                  <div class="layui-input-block">
+                    <select name="interest" lay-filter="aihao">
+                        <option value="0">空闲</option>
+                        <option value="1">占用</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">附件</label>
+                  <div class="layui-input-block">
+                    <button class="layui-btn">上传附件</button>
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">类别*</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">购入日期</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date" id="date1" autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">规格型号</label>
+                    <div class="layui-input-block">
+                      <input type="text" name="date"  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">当前部门</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="date" autocomplete="off" class="layui-input">
+                    </div>
+                </div> 
+                <div class="layui-inline">
+                  <label class="layui-form-label">设备来源</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date" autocomplete="off" class="layui-input">
+                  </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+</div>
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>备注信息</legend>
+        </fieldset>
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">建档人</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>   
+                <div class="layui-inline">
+                    <label class="layui-form-label">建档日期</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="date" id="date2" autocomplete="off" class="layui-input">
+                        </div>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">设备明细</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>设备配件明细</legend>
+        </fieldset>
+        <div class="layui-row">
+            <div class="layui-col-xs-12 layui-col-sm-12 layui-col-md-12 layui-col-lg-12">
+                  <div class="btn_content">
+                    <button class="layui-btn">添加</button>
+                    <button class="layui-btn">删除</button>
+                  </div>
+            </div>
+        </div>
+        <table class="layui-table">
+            <colgroup>
+              <col width="150">
+              <col width="200">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>选择 <input type="checkbox" name=""></th>
+                <th>配件名称</th>
+                <th>配件描述</th>
+              </tr> 
+            </thead>
+        </table>
+    </div>    
+</div>
+{% endblock%}
+
+{% block layui_footer%}
+       
+{% endblock %}
+
+{% block footer_javascript %}
+    <script src="{% static "js/purchase_requisition.js"%}"></script>
+{% endblock%}

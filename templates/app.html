@@ -1,0 +1,49 @@
+{% load i18n staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+    <link rel="stylesheet" href="{% static "layui/css/layui.css"%}" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.4.6.0.css"%}">
+</head>
+
+<body>
+ <div class="layui-tab layui-tab-card">
+  <ul class="layui-tab-title">
+    <li class="layui-this">网站设置</li>
+    <li>用户管理</li>
+    <li>权限分配</li>
+    <li>商品管理</li>
+    <li>订单管理</li>
+  </ul>
+  <div class="layui-tab-content" style="height: 100px;">
+    <div class="layui-tab-item layui-show">1</div>
+    <div class="layui-tab-item">2</div>
+    <div class="layui-tab-item">3</div>
+    <div class="layui-tab-item">4</div>
+    <div class="layui-tab-item">5</div>
+    <div class="layui-tab-item">6</div>
+  </div>
+</div>
+      
+</body>
+<script src="{% static "layui/layui.js"%}"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //获取hash来切换选项卡，假设当前地址的hash为lay-id对应的值
+  var layid = location.hash.replace(/^#test1=/, '');
+  element.tabChange('test1', layid); //假设当前地址为：http://a.com#test1=222，那么选项卡会自动切换到“发送消息”这一项
+  
+  //监听Tab切换，以改变地址hash值
+  element.on('tab(test1)', function(){
+    location.hash = 'test1='+ this.getAttribute('lay-id');
+  });
+});
+</script>   
+</html>

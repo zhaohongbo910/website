@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %} 
+{% block style%}
+    <link rel="stylesheet" href="{% static "css/organizational_management.css"%}" media="all">
+{% endblock %}
+{% block layui_body %}
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>检索条件</legend>
+        </fieldset>
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">编号</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">姓名</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">学历</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="date"  autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">性别</label>
+                  <div class="layui-input-block">
+                    <select name="modules" lay-verify="required" lay-search="">
+                      <option value="0">男</option>
+                      <option value="1">女</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">应聘职位</label>
+                  <div class="layui-input-block">
+                    <select name="modules" lay-verify="required" lay-search="">
+                      <option value="0">汽车维修</option>
+                      <option value="1">前端开发</option>
+                      <option value="2">人事管理专员</option>
+                      <option value="3">销售员</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">人员类型</label>
+                  <div class="layui-input-block">
+                    <select name="modules" lay-verify="required" lay-search="">
+                      <option value="0">未入职</option>
+                      <option value="1">已入职</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit="" lay-filter="demo2">搜索</button>
+            </div>
+        </form>
+    </div>
+</div> 
+
+<div class="layui-fluid">  
+     <div class="layui-row">
+        <div class="layui-col-xs-12 layui-col-sm-12 layui-col-md-12 layui-col-lg-12">
+              <div class="btn_content">
+                <button class="layui-btn">合同录入</button>
+                <button class="layui-btn">快速入职</button>
+                <button class="layui-btn">面试入职</button>
+                <button class="layui-btn">导出</button>
+              </div>
+        </div>
+    </div> 
+</div>  
+
+<div class="layui-fluid">  
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title form_title" style="margin-top: 50px;">
+            <legend>未入职人员列表</legend>
+        </fieldset>
+        <table class="layui-table">
+            <colgroup>
+              <col width="50">
+              <col width="100">
+              <col>
+              <col width="150">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>应聘岗位</th>
+                <th>联系方式</th>
+                <th>学历</th>
+                <th>毕业院校</th>
+                <th>专业</th>
+                <th>人员类型</th>
+                <th>复试结果</th>
+              </tr> 
+            </thead>
+            <tbody>
+              <tr>
+                <td>1122</td>
+                <td>田宇</td>
+                <td>男</td>
+                <td>web前端开发</td>
+                <td>13565978454</td>
+                <td>本科</td>
+                <td>北京大学</td>
+                <td>计算机</td>
+                <td>人才储备</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>1122</td>
+                <td>田宇</td>
+                <td>男</td>
+                <td>web前端开发</td>
+                <td>13565978454</td>
+                <td>本科</td>
+                <td>北京大学</td>
+                <td>计算机</td>
+                <td>人才储备</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>1122</td>
+                <td>田宇</td>
+                <td>男</td>
+                <td>web前端开发</td>
+                <td>13565978454</td>
+                <td>本科</td>
+                <td>北京大学</td>
+                <td>计算机</td>
+                <td>人才储备</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>1122</td>
+                <td>田宇</td>
+                <td>男</td>
+                <td>web前端开发</td>
+                <td>13565978454</td>
+                <td>本科</td>
+                <td>北京大学</td>
+                <td>计算机</td>
+                <td>人才储备</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>1122</td>
+                <td>田宇</td>
+                <td>男</td>
+                <td>web前端开发</td>
+                <td>13565978454</td>
+                <td>本科</td>
+                <td>北京大学</td>
+                <td>计算机</td>
+                <td>人才储备</td>
+                <td></td>
+              </tr>
+            </tbody>  
+        </table>
+    
+    </div>    
+</div> 
+
+{% endblock%}
+{% block footer_javascript %}
+    <script src="{% static "js/stock_management.js"%}"></script>
+{% endblock%}

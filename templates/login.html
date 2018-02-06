@@ -1,0 +1,32 @@
+{% load i18n staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "layui/css/layui.css"%}" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.4.6.0.css"%}">
+</head>
+
+<body>
+    <div class="layui-container">
+
+    </div>
+
+    <script src="{% static "layui/layui.js"%}"></script>
+    <script>
+        layui.config({
+            base: 'static/js/'
+        }).use(function() {
+            // var tab = layui.tab;
+            // debugger;
+            // if (tab.tabExists())
+            //     tab.tabAdd();
+        });
+    </script>
+</body>
+
+</html>
